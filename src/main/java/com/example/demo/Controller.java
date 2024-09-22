@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,8 +14,8 @@ public class Controller {
     }
 
     @GetMapping("/env")
-    public String envvar() {
-        String value_name = System.getenv("TEST_CONN_STR");
+    public Map<String, String> envvar() {
+        Map<String, String> value_name = System.getenv();
         return value_name;
     }
 }
