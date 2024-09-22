@@ -13,7 +13,7 @@ public class Controller {
 
     @GetMapping("/env")
     public String envvar() {
-        String value_name = System.getEnv("TEST_CONN_STR");
+        String value_name = System.getenv("TEST_CONN_STR");
         return value_name;
     }
 }
