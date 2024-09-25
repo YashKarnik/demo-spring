@@ -10,7 +10,7 @@ public class Controller {
 
     @GetMapping
     public String hello() {
-        return "Hello world - v1";
+        return "Hello world - v1 ";
     }
 
     @GetMapping("/env")
