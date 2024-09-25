@@ -10,12 +10,12 @@ public class Controller {
 
     @GetMapping
     public String hello() {
-        return "Hello world";
+        return "Hello world - v1";
     }
 
     @GetMapping("/env")
-    public Map<String, String> envvar() {
-        Map<String, String> value_name = System.getenv();
+    public String envvar() {
+        String value_name = System.getenv("CUSTOMCONNSTR_TEST_CONN_STR");
         return value_name;
     }
 }
