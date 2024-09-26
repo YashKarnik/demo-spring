@@ -14,8 +14,8 @@ public class Controller {
     }
 
     @GetMapping("/env")
-    public String envvar() {
-        String value_name = System.getenv("CUSTOMCONNSTR_TEST_CONN_STR");
+    public Map<String, String> envvar() {
+        Map<String, String> value_name = System.getenv();
         return value_name;
     }
 }
